@@ -4,8 +4,32 @@
   "description": "interview stuff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --port 3000 --devtool eval --progress --colors --hot --content-base dist",
+    "build:dev": "rimraf dist && webpack --config ./webpack.config.js --progress --profile --colors && npm start",
+    "build": "rimraf dist && webpack --config ./webpack.config.js --progress --profile --colors"
   },
   "author": "meredith capone",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-strict-mode": "^6.8.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-react": "^5.2.2",
+    "html-webpack-plugin": "^2.22.0",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
+  }
 }

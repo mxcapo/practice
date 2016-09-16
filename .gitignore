@@ -1,0 +1,8 @@
+# Mac OS X DS_Store
+.DS_Store
+
+# Dependency directory
+node_modules
+
+# Bundled file
+dist/
